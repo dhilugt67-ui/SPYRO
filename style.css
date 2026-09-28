@@ -1129,3 +1129,90 @@ footer p {
     }
 
 }
+/* =========================
+   CONTACT POPUP
+========================= */
+
+.contact-popup {
+    max-width: 450px;
+    text-align: center;
+}
+
+.contact-popup h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.contact-popup-text {
+    color: #888;
+    margin-bottom: 28px;
+}
+
+.contact-number {
+    padding: 22px;
+    margin-bottom: 18px;
+
+    background: #0d0d0d;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 6px;
+}
+
+.contact-number span {
+    display: block;
+
+    color: #d49a32;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+.contact-number strong {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.call-button,
+.whatsapp-button {
+    display: flex;
+
+    width: 100%;
+
+    min-height: 50px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.call-button {
+    background: #c84622;
+    color: white;
+}
+
+.call-button:hover {
+    background: #e15a30;
+    transform: translateY(-2px);
+}
+
+.whatsapp-button {
+    background: transparent;
+
+    color: #d49a32;
+
+    border: 1px solid rgba(212, 154, 50, 0.4);
+}
+
+.whatsapp-button:hover {
+    background: rgba(212, 154, 50, 0.08);
+}
