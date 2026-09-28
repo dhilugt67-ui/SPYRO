@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPYRO | Premium Food Mixes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">SPYRO</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" onclick="openCart()">
+        🛒 Cart <span id="cartCount">0</span>
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">PREMIUM FOOD MIXES</p>
+
+        <h1>
+            Mix it.<br>
+            Cook it.<br>
+            <span>Love it.</span>
+        </h1>
+
+        <p>
+            Premium mixes and marinades made for delicious
+            chicken dishes at home.
+        </p>
+
+        <a href="#products" class="hero-button">
+            Explore Products
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <p class="eyebrow">WHY SPYRO</p>
+
+    <h2>Great taste starts with the right mix.</h2>
+
+    <p>
+        SPYRO brings carefully crafted food mixes and marinades
+        that make cooking easier and more delicious.
+    </p>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">OUR PRODUCTS</p>
+
+        <h2>Choose Your Mix</h2>
+
+    </div>
+
+
+    <!-- CATEGORY FILTER -->
+
+    <div class="category-buttons">
+
+        <button class="category-button active"
+                onclick="filterProducts('all', this)">
+            All
+        </button>
+
+        <button class="category-button"
+                onclick="filterProducts('mixes', this)">
+            Mixes
+        </button>
+
+        <button class="category-button"
+                onclick="filterProducts('breading', this)">
+            Breading
+        </button>
+
+        <button class="category-button"
+                onclick="filterProducts('marinades', this)">
+            Marinades
+        </button>
+
+        <button class="category-button"
+                onclick="filterProducts('sauce', this)">
+            Sauce Mixes
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCT GRID -->
+
+    <div class="product-grid">
+
+
+        <!-- SPICY MIX -->
+
+        <div class="product-card" data-category="mixes">
+
+            <div class="product-image spicy">
+                <div class="package">
+                    <small>SPYRO</small>
+                    <strong>SPICY</strong>
+                    <span>MIX</span>
+                </div>
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">MIX</p>
+
+                <h3>Spicy Mix</h3>
+
+                <p>
+                    A rich spicy blend for flavourful chicken dishes.
+                </p>
+
+                <div class="weight-buttons">
+
+                    <button class="weight-button active"
+                            onclick="selectWeight(this, '1 kg', 149)">
+                        1 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '2 kg', 149 * 2)">
+                        2 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '5 kg', 149 * 5)">
+                        5 kg
+                    </button>
+
+                </div>
+
+                <div class="product-bottom">
+
+                    <strong class="product-price">₹149</strong>
+
+                    <button
+                        class="add-button"
+                        onclick="addSelectedProduct(this, 'Spicy Mix', 149)">
+                        Add +
+                    </button>
+
+                </div>
+
+                <button
+                    class="details-button"
+                    onclick="openDetails('Spicy Mix')">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BREADING MIX -->
+
+        <div class="product-card" data-category="breading">
+
+            <div class="product-image breading">
+                <div class="package">
+                    <small>SPYRO</small>
+                    <strong>BREADING</strong>
+                    <span>MIX</span>
+                </div>
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">BREADING</p>
+
+                <h3>Breading Mix</h3>
+
+                <p>
+                    Create a crispy coating for delicious fried chicken.
+                </p>
+
+                <div class="weight-buttons">
+
+                    <button class="weight-button active"
+                            onclick="selectWeight(this, '1 kg', 159)">
+                        1 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '2 kg', 159 * 2)">
+                        2 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '5 kg', 159 * 5)">
+                        5 kg
+                    </button>
+
+                </div>
+
+                <div class="product-bottom">
+
+                    <strong class="product-price">₹159</strong>
+
+                    <button
+                        class="add-button"
+                        onclick="addSelectedProduct(this, 'Breading Mix', 159)">
+                        Add +
+                    </button>
+
+                </div>
+
+                <button
+                    class="details-button"
+                    onclick="openDetails('Breading Mix')">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRILL MARINADE -->
+
+        <div class="product-card" data-category="marinades">
+
+            <div class="product-image grill">
+                <div class="package">
+                    <small>SPYRO</small>
+                    <strong>GRILL</strong>
+                    <span>MARINADE</span>
+                </div>
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">MARINADE</p>
+
+                <h3>Grill Marinade</h3>
+
+                <p>
+                    A bold marinade for smoky grilled chicken.
+                </p>
+
+                <div class="weight-buttons">
+
+                    <button class="weight-button active"
+                            onclick="selectWeight(this, '1 kg', 169)">
+                        1 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '2 kg', 169 * 2)">
+                        2 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '5 kg', 169 * 5)">
+                        5 kg
+                    </button>
+
+                </div>
+
+                <div class="product-bottom">
+
+                    <strong class="product-price">₹169</strong>
+
+                    <button
+                        class="add-button"
+                        onclick="addSelectedProduct(this, 'Grill Marinade', 169)">
+                        Add +
+                    </button>
+
+                </div>
+
+                <button
+                    class="details-button"
+                    onclick="openDetails('Grill Marinade')">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEXICAN MARINADE -->
+
+        <div class="product-card" data-category="marinades">
+
+            <div class="product-image mexican">
+                <div class="package">
+                    <small>SPYRO</small>
+                    <strong>MEXICAN</strong>
+                    <span>MARINADE</span>
+                </div>
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">MARINADE</p>
+
+                <h3>Mexican Marinade</h3>
+
+                <p>
+                    A vibrant Mexican-style flavour for chicken.
+                </p>
+
+                <div class="weight-buttons">
+
+                    <button class="weight-button active"
+                            onclick="selectWeight(this, '1 kg', 169)">
+                        1 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '2 kg', 169 * 2)">
+                        2 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '5 kg', 169 * 5)">
+                        5 kg
+                    </button>
+
+                </div>
+
+                <div class="product-bottom">
+
+                    <strong class="product-price">₹169</strong>
+
+                    <button
+                        class="add-button"
+                        onclick="addSelectedProduct(this, 'Mexican Marinade', 169)">
+                        Add +
+                    </button>
+
+                </div>
+
+                <button
+                    class="details-button"
+                    onclick="openDetails('Mexican Marinade')">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHEESY SAUCE -->
+
+        <div class="product-card" data-category="sauce">
+
+            <div class="product-image cheesy">
+                <div class="package">
+                    <small>SPYRO</small>
+                    <strong>CHEESY</strong>
+                    <span>SAUCE MIX</span>
+                </div>
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-category">SAUCE MIX</p>
+
+                <h3>Cheesy Sauce Mix</h3>
+
+                <p>
+                    A creamy cheesy mix for rich sauces and dishes.
+                </p>
+
+                <div class="weight-buttons">
+
+                    <button class="weight-button active"
+                            onclick="selectWeight(this, '1 kg', 179)">
+                        1 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '2 kg', 179 * 2)">
+                        2 kg
+                    </button>
+
+                    <button class="weight-button"
+                            onclick="selectWeight(this, '5 kg', 179 * 5)">
+                        5 kg
+                    </button>
+
+                </div>
+
+                <div class="product-bottom">
+
+                    <strong class="product-price">₹179</strong>
+
+                    <button
+                        class="add-button"
+                        onclick="addSelectedProduct(this, 'Cheesy Sauce Mix', 179)">
+                        Add +
+                    </button>
+
+                </div>
+
+                <button
+                    class="details-button"
+                    onclick="openDetails('Cheesy Sauce Mix')">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section" id="about">
+
+    <p class="eyebrow">ABOUT SPYRO</p>
+
+    <h2>Simple ingredients.<br>Big flavour.</h2>
+
+    <p>
+        SPYRO is created for people who want great-tasting food
+        without complicated preparation.
+    </p>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">HOW IT WORKS</p>
+
+        <h2>From SPYRO to your kitchen.</h2>
+
+    </div>
+
+    <div class="steps">
+
+        <div class="step">
+            <span>01</span>
+            <h3>Choose</h3>
+            <p>Select your favourite mix.</p>
+        </div>
+
+        <div class="step">
+            <span>02</span>
+            <h3>Order</h3>
+            <p>Enter your delivery details.</p>
+        </div>
+
+        <div class="step">
+            <span>03</span>
+            <h3>Cook</h3>
+            <p>Mix, cook and enjoy.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+    <p class="eyebrow">CONTACT</p>
+
+    <h2>Have a question?</h2>
+
+    <p>
+        Contact SPYRO for product information and support.
+    </p>
+
+    <button class="contact-button" onclick="contactMessage()">
+        Contact SPYRO
+    </button>
+
+</section>
+
+
+<!-- ================= CART ================= -->
+
+<div class="popup-overlay" id="cartPopup">
+
+    <div class="popup cart-box">
+
+        <button class="close-button" onclick="closeCart()">×</button>
+
+        <p class="eyebrow">YOUR CART</p>
+
+        <h2>Your Order</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cartTotal">₹0</strong>
+        </div>
+
+       <button class="checkout-button" onclick="openCheckout()">
+    Proceed to Checkout
+</button>
+    </div>
+
+</div>
+
+
+<!-- ================= PRODUCT DETAILS ================= -->
+
+<div class="popup-overlay" id="detailsPopup">
+
+    <div class="popup details-box">
+
+        <button class="close-button" onclick="closeDetails()">×</button>
+
+        <p class="eyebrow">PRODUCT DETAILS</p>
+
+        <h2 id="detailsTitle">Product</h2>
+
+        <div id="detailsContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<!-- ================= CHECKOUT ================= -->
+
+<div class="popup-overlay" id="checkoutPopup">
+
+    <div class="popup checkout-box">
+
+        <button
+            class="close-button"
+            onclick="closeCheckout()">
+            ×
+        </button>
+
+        <p class="eyebrow">CHECKOUT</p>
+
+        <h2>Customer Details</h2>
+
+        <p class="checkout-description">
+            Enter your details before confirming the order.
+        </p>
+
+
+        <form
+            id="checkoutForm"
+            onsubmit="placeOrder(event)">
+
+
+            <!-- CUSTOMER DETAILS -->
+
+            <div class="form-grid">
+
+
+                <!-- NAME -->
+
+                <div class="form-group full">
+
+                    <label for="customerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        autocomplete="name"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="customerPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        inputmode="numeric"
+                        maxlength="10"
+                        autocomplete="tel"
+                        placeholder="10-digit number"
+                        required>
+
+                </div>
+
+
+                <!-- COUNTRY -->
+
+                <div class="form-group">
+
+                    <label for="customerCountry">
+                        Country
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerCountry"
+                        autocomplete="country-name"
+                        placeholder="Enter your country"
+                        required>
+
+                </div>
+
+
+                <!-- STATE -->
+
+                <div class="form-group">
+
+                    <label for="customerState">
+                        State
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerState"
+                        autocomplete="address-level1"
+                        placeholder="Enter your state"
+                        required>
+
+                </div>
+
+
+                <!-- CITY -->
+
+                <div class="form-group">
+
+                    <label for="customerCity">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerCity"
+                        autocomplete="address-level2"
+                        placeholder="Enter your city"
+                        required>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+
+                <div class="form-group full">
+
+                    <label for="customerAddress">
+                        House / Address
+                    </label>
+
+                    <textarea
+                        id="customerAddress"
+                        autocomplete="street-address"
+                        placeholder="House name, street, area..."
+                        required></textarea>
+
+                </div>
+
+
+                <!-- PINCODE -->
+
+                <div class="form-group">
+
+                    <label for="customerPincode">
+                        Pincode
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerPincode"
+                        inputmode="numeric"
+                        maxlength="6"
+                        autocomplete="postal-code"
+                        placeholder="6-digit pincode"
+                        required>
+
+                </div>
+
+
+                <!-- ORDER NOTE -->
+
+                <div class="form-group">
+
+                    <label for="orderNote">
+                        Order Note
+                        <span>Optional</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="orderNote"
+                        placeholder="Any additional note">
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="checkout-summary">
+
+                <h3>Order Summary</h3>
+
+                <div id="checkoutSummary"></div>
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="checkoutTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLACE ORDER -->
+
+            <button
+                type="submit"
+                class="place-order-button">
+
+                Place Order
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ================= OTP ================= -->
+
+<div class="popup-overlay" id="otpPopup">
+
+    <div class="popup otp-box">
+
+        <button class="close-button" onclick="closeOTP()">×</button>
+
+        <div class="otp-icon">
+            ✓
+        </div>
+
+        <p class="eyebrow">VERIFY ORDER</p>
+
+        <h2>Enter OTP</h2>
+
+        <p>
+            A 6-digit verification code is required
+            to confirm your order.
+        </p>
+
+        <div class="otp-demo-note" id="otpDemoNote">
+            Demo mode
+        </div>
+
+        <input
+            type="text"
+            id="otpInput"
+            class="otp-input"
+            inputmode="numeric"
+            maxlength="6"
+            placeholder="000000">
+
+        <p class="otp-error" id="otpError"></p>
+
+        <button
+            class="verify-button"
+            onclick="verifyOTP()">
+            Verify OTP
+        </button>
+
+        <button
+            class="resend-button"
+            onclick="sendOTP()">
+            Resend OTP
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ORDER CONFIRMATION ================= -->
+
+<div class="popup-overlay" id="confirmationPopup">
+
+    <div class="popup confirmation-box">
+
+        <div class="success-check">
+            ✓
+        </div>
+
+        <p class="eyebrow">ORDER CONFIRMED</p>
+
+        <h2>Thank You!</h2>
+
+        <p id="confirmationText">
+            Your order has been confirmed.
+        </p>
+
+        <div class="order-id-box">
+
+            <span>Order ID</span>
+
+            <strong id="orderId">
+                SPYRO-000000
+            </strong>
+
+        </div>
+
+
+        <button
+            class="whatsapp-button"
+            onclick="sendOrderToWhatsApp()">
+            Send Order on WhatsApp
+        </button>
+
+
+        <button
+            class="continue-button"
+            onclick="closeConfirmation()">
+            Continue Shopping
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NOTIFICATION ================= -->
+
+<div id="notification" class="spyro-notification"></div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="logo">SPYRO</div>
+
+    <p>
+        Mix it. Cook it. Love it.
+    </p>
+
+    <span>
+        © 2026 SPYRO. All rights reserved.
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
