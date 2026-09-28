@@ -514,9 +514,9 @@
         Contact SPYRO for product information and support.
     </p>
 
-    <button class="contact-button" onclick="contactMessage()">
-        Contact SPYRO
-    </button>
+<button class="contact-now-button" onclick="openContactPopup()">
+    Contact Now
+</button>
 
 </section>
 
@@ -567,7 +567,6 @@
 </div>
 
 
-<!-- ================= CHECKOUT ================= -->
 
 <!-- ================= CHECKOUT ================= -->
 
@@ -908,6 +907,41 @@
 
 
 <script src="script.js"></script>
+<!-- CONTACT POPUP -->
+<div class="popup-overlay" id="contactPopup">
 
+    <div class="popup contact-popup">
+
+        <button class="close-button" onclick="closeContactPopup()">×</button>
+
+        <p class="eyebrow">GET IN TOUCH</p>
+
+        <h2>Contact SPYRO</h2>
+
+        <p class="contact-popup-text">
+            Have a question about our mixes? We're here to help.
+        </p>
+
+        <div class="contact-number">
+            <span>PHONE</span>
+            <strong>+91 9995546022</strong>
+        </div>
+
+        <a
+            href="tel:+918086677677"
+            class="call-button">
+            📞 Call Now
+        </a>
+
+        <a
+            href="https://wa.me/919995546022"
+            target="_blank"
+            class="whatsapp-button">
+            WhatsApp
+        </a>
+
+    </div>
+
+</div>
 </body>
 </html>
